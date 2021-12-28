@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BooksToReadComponent } from './books-to-read.component';
+import { BooksService } from '../shared/services/books.service';
 
 
 
@@ -10,6 +11,9 @@ import { BooksToReadComponent } from './books-to-read.component';
   ],
   imports: [
     CommonModule
+  ],
+  providers: [
+    BooksService
   ]
 })
 export class BooksToReadModule { }

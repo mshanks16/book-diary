@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksService } from '../shared/services/books.service';
 
 @Component({
   selector: 'app-completed-books',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompletedBooksComponent implements OnInit {
 
-  constructor() { }
+  constructor(private booksService: BooksService) { }
 
   ngOnInit(): void {
+    this.booksService.getCompleted()
+      .subscribe((result) => {
+        console.log(result)
+      });
   }
 
 }
