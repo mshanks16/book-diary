@@ -1,1 +1,7 @@
-<p>completed-books works!</p>
+<mat-list role="list">
+    <mat-list-item *ngFor="let book of completedBooks" role="listitem">
+        <h3 matLine>{{book.title}}</h3>
+        <p matLine>{{book.description}}</p>
+        <p matLine>{{book.status}}</p>
+    </mat-list-item>
+  </mat-list>

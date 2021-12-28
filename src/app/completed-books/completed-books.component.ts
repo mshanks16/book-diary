@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../shared/services/books.interface';
 import { BooksService } from '../shared/services/books.service';
 
 @Component({
@@ -7,14 +8,15 @@ import { BooksService } from '../shared/services/books.service';
   styleUrls: ['./completed-books.component.scss']
 })
 export class CompletedBooksComponent implements OnInit {
+  completedBooks: Book[] = [];
 
   constructor(private booksService: BooksService) { }
 
   ngOnInit(): void {
     this.booksService.getCompleted()
-      .subscribe((result) => {
-        console.log(result)
-      });
+      .subscribe(completedBooks => 
+        this.completedBooks = completedBooks
+      );
   }
 
 }
