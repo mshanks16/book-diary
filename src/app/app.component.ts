@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'book-diary';
+  title = 'Book Diary';
+  links = [
+    { path: '/home', icon: 'home', title: 'Home' },
+    { path: '/books-to-read', icon: 'import_contacts', title: 'Books to Read' },
+    { path: '/completed-books', icon: 'done', title: 'Completed Books' },
+  ];
+
+  constructor(private router: Router) {}
+
 }
