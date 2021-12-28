@@ -16,6 +16,10 @@
               type="text" name="description"
               [(ngModel)]="book.description">
           </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Notes</mat-label>
+            <textarea matInput [(ngModel)]="book.notes" name="Notes"></textarea>
+          </mat-form-field>
           <section>
           </section>
         </mat-card-content>
