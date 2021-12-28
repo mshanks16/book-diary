@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CompletedBooksModule } from './completed-books/completed-books.module';
 import { BooksToReadModule } from './books-to-read/books-to-read.module';
+import { EditingBooksModule } from './editing-books/editing-books.module';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { BooksToReadModule } from './books-to-read/books-to-read.module';
     HttpClientModule,
     CompletedBooksModule,
     BooksToReadModule,
+    EditingBooksModule
   ],
   declarations: [
     AppComponent

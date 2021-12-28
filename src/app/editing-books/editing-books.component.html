@@ -1,0 +1,32 @@
+<mat-card *ngIf="book">
+    <mat-card-header>
+        <mat-card-title>
+            Editing: {{book.title}}
+        </mat-card-title>
+    </mat-card-header>
+    <form #form="ngForm" (submit)="updateBook()">
+    <mat-card-content>
+          <mat-form-field>
+            <input matInput placeholder="Title"
+              type="text" name="title" required
+              [(ngModel)]="book.title">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Description"
+              type="text" name="description"
+              [(ngModel)]="book.description">
+          </mat-form-field>
+          <section>
+          </section>
+        </mat-card-content>
+        <mat-card-actions>
+          <button [disabled]="form.invalid" type="submit" mat-button color="primary">Submit</button>
+        </mat-card-actions>
+    </form>
+</mat-card>
+
+<mat-card *ngIf="!book">
+    <mat-card-content>
+        <mat-spinner></mat-spinner>
+    </mat-card-content>
+</mat-card>

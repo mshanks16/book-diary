@@ -1,8 +1,25 @@
 {
-    "books": [
-        { "id": 1, "title": "Old Man and the Sea 1", "status": "Completed" },
-        { "id": 2, "title": "Old Man and the Sea 2", "status": "Not Started"  },
-        { "id": 3, "title": "Old Man and the Sea 3", "status": "Completed"  },
-        { "id": 4, "title": "Old Man and the Sea 4", "status": "Currently Reading" }
-    ]
+  "books": [
+    {
+      "id": 1,
+      "title": "Old Man and the Sea 1",
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "title": "Old Man and the Sea 2",
+      "status": "Not Started"
+    },
+    {
+      "id": 3,
+      "title": "Old Man and the Sea 3",
+      "status": "Completed",
+      "description": "Story about old man"
+    },
+    {
+      "id": 4,
+      "title": "Old Man and the Sea 4",
+      "status": "Currently Reading"
+    }
+  ]
 }

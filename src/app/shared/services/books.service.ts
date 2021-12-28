@@ -16,6 +16,13 @@ export class BooksService {
   getCompleted(): Observable<Book[]> {
     return this.http.get<Book[]>(this.getUrl() + "?status=Completed");
   }
+  getBookById(bookId: number): Observable<Book> {
+    return this.http.get<Book>(this.getUrl() + `/${bookId}`);
+  }
+
+  updateBook(book: Book) {
+    return this.http.put(this.getUrl() + `/${book.id}`, book)
+  }
 
   private getUrl() {
     return `${environment.baseUrl}${this.model}`;

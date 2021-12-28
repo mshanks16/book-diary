@@ -10,8 +10,8 @@ export class AppComponent {
   title = 'Book Diary';
   links = [
     { path: '/home', icon: 'home', title: 'Home' },
-    { path: '/books-to-read', icon: 'import_contacts', title: 'Books to Read' },
-    { path: '/completed-books', icon: 'done', title: 'Completed Books' },
+    { path: '/book/to-read', icon: 'import_contacts', title: 'Books to Read' },
+    { path: '/book/completed', icon: 'done', title: 'Completed Books' },
   ];
 
   constructor(private router: Router) {}
