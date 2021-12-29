@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Book } from '../shared/services/books.interface';
-import { BooksService } from '../shared/services/books.service';
+import { Book } from 'src/app/shared/services/books.interface';
+import { BooksService } from 'src/app/shared/services/books.service';
 
 @Component({
   selector: 'app-editing-books',
-  templateUrl: './editing-books.component.html',
-  styleUrls: ['./editing-books.component.scss']
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.scss']
 })
-export class EditingBooksComponent implements OnInit {
-  book: any;
+export class EditBooksComponent implements OnInit {
+  book: Book;
 
   constructor(
     private booksService: BooksService,
@@ -26,13 +26,8 @@ export class EditingBooksComponent implements OnInit {
       );
   }
 
-  selectBook(bookId: number) {
-    this.router.navigate(['book', bookId]);
-  }
-
   updateBook(){
     this.booksService.updateBook(this.book)
       .subscribe(result => console.log(result));
   }
-
 }

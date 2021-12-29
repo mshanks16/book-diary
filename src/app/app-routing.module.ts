@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BooksToReadComponent } from './books-to-read/books-to-read.component';
-import { CompletedBooksComponent } from './completed-books/completed-books.component';
-import { EditingBooksComponent } from './editing-books/editing-books.component';
+import { CompletedBooksComponent } from './books/completed/completed.component';
+import { EditBooksComponent } from './books/edit/edit.component';
+import { ToReadBooksComponent } from './books/to-read/to-read.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'book/to-read', component: BooksToReadComponent },
-  { path: 'book/completed', component: CompletedBooksComponent },
-  { path: 'book/:id', component: EditingBooksComponent },
+  { path: 'book/to-read', component: ToReadBooksComponent },
+  { path: 'book/completed', component: CompletedBooksComponent},
+  { path: 'book/:id', component: EditBooksComponent},
   { path: '**', redirectTo: '/home' }
 ];  
 

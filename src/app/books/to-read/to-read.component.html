@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Books to Read
+        </mat-card-title>
+    </mat-card-header>
+        <mat-card-content>
+            <app-books-list [books]="toReadBooks" (select)="selectBook($event)"></app-books-list>
+        </mat-card-content>
+</mat-card>

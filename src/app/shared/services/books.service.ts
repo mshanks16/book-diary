@@ -16,6 +16,11 @@ export class BooksService {
   getCompleted(): Observable<Book[]> {
     return this.http.get<Book[]>(this.getUrl() + "?status=Completed");
   }
+
+  getToRead(): Observable<Book[]> {
+    return this.http.get<Book[]>(this.getUrl() + "?status=Not Started&status=Currently Reading");
+  }
+
   getBookById(bookId: number): Observable<Book> {
     return this.http.get<Book>(this.getUrl() + `/${bookId}`);
   }

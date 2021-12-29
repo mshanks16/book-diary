@@ -7,9 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { CompletedBooksModule } from './completed-books/completed-books.module';
-import { BooksToReadModule } from './books-to-read/books-to-read.module';
-import { EditingBooksModule } from './editing-books/editing-books.module';
+import { BooksModule } from './books/books.module';
+
 
 @NgModule({
   imports: [
@@ -19,9 +18,7 @@ import { EditingBooksModule } from './editing-books/editing-books.module';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    CompletedBooksModule,
-    BooksToReadModule,
-    EditingBooksModule
+    BooksModule
   ],
   declarations: [
     AppComponent
