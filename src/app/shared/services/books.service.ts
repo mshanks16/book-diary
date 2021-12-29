@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Book } from './books.interface';
+import { Book, BookStatus } from './books.interface';
 
 
 @Injectable({
@@ -27,6 +27,19 @@ export class BooksService {
 
   updateBook(book: Book) {
     return this.http.put(this.getUrl() + `/${book.id}`, book)
+  }
+
+  createBook(book: Book): Observable<Book> {
+    return this.http.post<Book>(this.getUrl(), book)
+  }
+
+  getNewBook(): Book {
+    return {
+      title: "",
+      description: "",
+      notes: "",
+      status: BookStatus.NotStarted
+    };
   }
 
   private getUrl() {

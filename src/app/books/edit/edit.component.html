@@ -1,10 +1,13 @@
 <mat-card *ngIf="book">
     <mat-card-header>
-        <mat-card-title>
+        <mat-card-title *ngIf="!isNew">
             Editing: {{book.title}}
         </mat-card-title>
+        <mat-card-title *ngIf="isNew">
+          New Book
+      </mat-card-title>
     </mat-card-header>
-    <form #form="ngForm" (submit)="updateBook()">
+    <form #form="ngForm" (submit)="saveBook()">
     <mat-card-content>
           <mat-form-field>
             <input matInput placeholder="Title"
@@ -34,7 +37,6 @@
         </mat-card-actions>
     </form>
 </mat-card>
-
 <mat-card *ngIf="!book">
     <mat-card-content>
         <mat-spinner></mat-spinner>

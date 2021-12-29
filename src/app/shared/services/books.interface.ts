@@ -5,7 +5,7 @@ export enum BookStatus {
 }
 
 export interface Book {
-    id: number;
+    id?: number;
     title: string;
     description: string;
     notes: string;
