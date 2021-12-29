@@ -16,11 +16,11 @@
               type="text" name="description"
               [(ngModel)]="book.description">
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field>
             <mat-label>Notes</mat-label>
             <textarea matInput [(ngModel)]="book.notes" name="notes"></textarea>
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field>
             <mat-label>Status</mat-label>
             <mat-select [(ngModel)]="book.status" name="status">
               <mat-option value="Not Started">Not Started</mat-option>
