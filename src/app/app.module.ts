@@ -8,6 +8,7 @@ import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BooksModule } from './books/books.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { BooksModule } from './books/books.module';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    BooksModule
+    BooksModule,
+    HomeModule
   ],
   declarations: [
     AppComponent

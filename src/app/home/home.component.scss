@@ -1,0 +1,9 @@
+.home-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+
+    app-stat-card {
+        width: 25%;
+    }
+}

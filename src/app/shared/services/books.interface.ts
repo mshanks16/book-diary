@@ -11,3 +11,9 @@ export interface Book {
     notes: string;
     status: BookStatus;
 }
+
+export interface Stat {
+    title: string;
+    subtitle: string;
+    icon: string;
+}

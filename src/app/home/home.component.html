@@ -1,1 +1,3 @@
-<p>home works!</p>
+<div class="home-container"> 
+    <app-stat-card *ngFor="let stat of stats" [title]="stat.title" [icon]="stat.icon" [subtitle]="stat.subtitle"></app-stat-card>
+</div>

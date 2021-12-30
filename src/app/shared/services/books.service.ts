@@ -42,6 +42,14 @@ export class BooksService {
     };
   }
 
+  getStats() {
+    return [
+      { title: "Total Pages Read", icon: "auto_stories", subtitle: "203 pages" },
+      { title: "Total Books Read", icon: "import_contacts", subtitle: "302 books" },
+      { title: "Currently Reading", icon: "menu_book", subtitle: "Title of current book" }
+    ];
+  }
+
   private getUrl() {
     return `${environment.baseUrl}${this.model}`;
   }
