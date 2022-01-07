@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Do you want to leave a rating?</h2>
+<div mat-dialog-content>
+    <button mat-icon-button color="accent" *ngFor="let star of [1, 2, 3, 4, 5];"
+    (click)="onClickStar(star)">
+        <mat-icon>
+          {{getIcon(star)}}
+        </mat-icon>
+      </button>
+</div>
+<div mat-dialog-actions>
+  <button mat-stroked-button  (click)="onClickNo()">No Thanks</button>
+  <button mat-flat-button color="primary" [mat-dialog-close]="rating" cdkFocusInitial>Ok</button>
+</div>

@@ -25,8 +25,8 @@ export class BooksService {
     return this.http.get<Book>(this.getUrl() + `/${bookId}`);
   }
 
-  updateBook(book: Book) {
-    return this.http.put(this.getUrl() + `/${book.id}`, book)
+  updateBook(book: Book): Observable<Book> {
+    return this.http.put<Book>(this.getUrl() + `/${book.id}`, book)
   }
 
   createBook(book: Book): Observable<Book> {
@@ -38,7 +38,7 @@ export class BooksService {
       title: "",
       description: "",
       notes: "",
-      status: BookStatus.NotStarted
+      status: BookStatus.NotStarted,
     };
   }
 
@@ -46,7 +46,7 @@ export class BooksService {
     return [
       { title: "Total Pages Read", icon: "auto_stories", subtitle: "203 pages" },
       { title: "Total Books Read", icon: "import_contacts", subtitle: "302 books" },
-      { title: "Currently Reading", icon: "menu_book", subtitle: "Title of current book" }
+      { title: "Currently Reading", icon: "menu_book", subtitle: "Title of current book" },
     ];
   }
 

@@ -25,9 +25,10 @@
     {
       "title": "Old Book",
       "description": "Really old book",
-      "notes": "",
-      "status": "Not Started",
-      "id": 5
+      "notes": "this",
+      "status": "Completed",
+      "id": 5,
+      "rating": 3
     }
   ]
 }

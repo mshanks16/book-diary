@@ -20,7 +20,7 @@ import { HomeModule } from './home/home.module';
     MaterialModule,
     HttpClientModule,
     BooksModule,
-    HomeModule
+    HomeModule,
   ],
   declarations: [
     AppComponent

@@ -10,6 +10,7 @@ export interface Book {
     description: string;
     notes: string;
     status: BookStatus;
+    rating?: number;
 }
 
 export interface Stat {
