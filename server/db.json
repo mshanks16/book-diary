@@ -8,7 +8,8 @@
     {
       "id": 2,
       "title": "Old Man and the Sea 2",
-      "status": "Not Started"
+      "status": "Completed",
+      "pages": 15
     },
     {
       "id": 3,
@@ -20,7 +21,9 @@
     {
       "id": 4,
       "title": "Old Man and the Sea 4",
-      "status": "Currently Reading"
+      "status": "Currently Reading",
+      "pages": 100,
+      "currentPage": 10
     },
     {
       "title": "Old Book",
@@ -28,7 +31,19 @@
       "notes": "this",
       "status": "Completed",
       "id": 5,
-      "rating": 3
+      "rating": 3,
+      "pages": 300,
+      "currentPage": 300,
+      "dateCompleted": "2022-01-10T21:44:30.941Z"
+    },
+    {
+      "title": "New Book",
+      "description": "test",
+      "notes": "",
+      "status": "Not Started",
+      "pages": 300,
+      "currentPage": 0,
+      "id": 6
     }
   ]
 }

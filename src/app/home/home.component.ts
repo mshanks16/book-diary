@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { forkJoin } from 'rxjs';
 import { Stat } from '../shared/services/books.interface';
 import { BooksService } from '../shared/services/books.service';
 
@@ -14,7 +15,18 @@ export class HomeComponent implements OnInit {
   constructor(private bookService: BooksService) { }
 
   ngOnInit(): void {
-    this.stats = this.bookService.getStats();
+    
+    forkJoin({
+      totalPagesRead: this.bookService.getTotalPagesRead(),
+      totalBooksRead: this.bookService.getTotalBooksRead(),
+    })
+  .subscribe(({ totalPagesRead, totalBooksRead }) => {
+    this.stats = [
+      { title: "Total Pages Read", icon: "auto_stories", subtitle: `${totalPagesRead} pages` },
+      { title: "Total Books Read", icon: "import_contacts", subtitle: `${totalBooksRead} books` },
+    ]
+  })
+    
   }
 
 }

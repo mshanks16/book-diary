@@ -24,6 +24,16 @@
             <textarea matInput [(ngModel)]="book.notes" name="notes"></textarea>
           </mat-form-field>
           <mat-form-field>
+            <input matInput placeholder="Total Pages"
+              type="number" name="totalPages"
+              [(ngModel)]="book.pages">
+          </mat-form-field>
+          <mat-form-field *ngIf="book.status === 'Currently Reading'">
+            <input matInput placeholder="Current Page"
+              type="number" name="currentPage"
+              [(ngModel)]="book.currentPage">
+          </mat-form-field>
+          <mat-form-field>
             <mat-label>Status</mat-label>
             <mat-select [(ngModel)]="book.status" name="status">
               <mat-option value="Not Started">Not Started</mat-option>

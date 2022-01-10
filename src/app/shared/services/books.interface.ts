@@ -11,6 +11,9 @@ export interface Book {
     notes: string;
     status: BookStatus;
     rating?: number;
+    pages: number;
+    currentPage: number;
+    dateCompleted?: Date;
 }
 
 export interface Stat {

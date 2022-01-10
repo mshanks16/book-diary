@@ -4,10 +4,6 @@ import { Book, BookStatus } from 'src/app/shared/services/books.interface';
 import { BooksService } from 'src/app/shared/services/books.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
 
 
 @Component({
@@ -42,7 +38,7 @@ export class EditBooksComponent implements OnInit {
   }
 
   saveBook() {
-    if ( this.isNew) {
+    if (this.isNew) {
       this.booksService.createBook(this.book)
         .subscribe(book => this.book = book);
     } else {
