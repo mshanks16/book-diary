@@ -15,6 +15,11 @@
               [(ngModel)]="book.title">
           </mat-form-field>
           <mat-form-field>
+            <input matInput placeholder="Author"
+              type="text" name="author" required
+              [(ngModel)]="book.author">
+          </mat-form-field>
+          <mat-form-field>
             <input matInput placeholder="Description"
               type="text" name="description"
               [(ngModel)]="book.description">

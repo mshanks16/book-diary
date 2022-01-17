@@ -61,6 +61,7 @@ export class BooksService {
     return {
       title: "",
       description: "",
+      author: "",
       notes: "",
       status: BookStatus.NotStarted,
       pages: 0,
