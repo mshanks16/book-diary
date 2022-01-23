@@ -58,6 +58,17 @@
       "pages": 621,
       "currentPage": 0,
       "id": 7
+    },
+    {
+      "title": "The Silent Patient",
+      "imagePath": "https://m.media-amazon.com/images/I/515SxVllQJS.jpg",
+      "description": "",
+      "author": "Alex Michaelides",
+      "notes": "",
+      "status": "Not Started",
+      "pages": 336,
+      "currentPage": 0,
+      "id": 8
     }
   ]
 }

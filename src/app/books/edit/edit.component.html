@@ -20,6 +20,11 @@
               [(ngModel)]="book.author">
           </mat-form-field>
           <mat-form-field>
+            <input matInput placeholder="Image Path"
+              type="text" name="imagePath" required
+              [(ngModel)]="book.imagePath">
+          </mat-form-field>
+          <mat-form-field>
             <input matInput placeholder="Description"
               type="text" name="description"
               [(ngModel)]="book.description">

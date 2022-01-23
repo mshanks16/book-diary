@@ -7,8 +7,9 @@ export enum BookStatus {
 export interface Book {
     id?: number;
     title: string;
+    imagePath: string;
     description: string;
-    author: string,
+    author: string;
     notes: string;
     status: BookStatus;
     rating?: number;

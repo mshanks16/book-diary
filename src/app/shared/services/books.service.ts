@@ -60,6 +60,7 @@ export class BooksService {
   getNewBook(): Book {
     return {
       title: "",
+      imagePath: "",
       description: "",
       author: "",
       notes: "",

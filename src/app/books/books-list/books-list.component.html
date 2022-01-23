@@ -1,5 +1,6 @@
 <mat-list role="list">
     <mat-list-item *ngFor="let book of books" (click)="select.emit(book.id)" role="listitem">
+        <img matListAvatar [src]="book.imagePath || 'assets/no-image-placeholder.png'">
         <h3 matLine>{{book.title}}</h3>
         <p matLine>{{book.author}}</p>
         <p matLine>{{book.notes}}</p>
