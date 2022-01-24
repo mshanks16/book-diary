@@ -27,7 +27,8 @@
       "status": "Currently Reading",
       "pages": 100,
       "currentPage": 10,
-      "author": "Meahgan Test"
+      "author": "Meahgan Test",
+      "imagePath": "https://m.media-amazon.com/images/I/515t1XFigcL.jpg"
     },
     {
       "title": "Old Book",
@@ -65,7 +66,7 @@
       "description": "",
       "author": "Alex Michaelides",
       "notes": "",
-      "status": "Not Started",
+      "status": "Currently Reading",
       "pages": 336,
       "currentPage": 0,
       "id": 8

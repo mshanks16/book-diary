@@ -1,0 +1,10 @@
+<mat-card class="currently-reading-card">
+        <mat-card-title>Currently Reading</mat-card-title>
+        <h3>{{book.title}}</h3>
+    <img mat-card-lg-image src={{book.imagePath}}>
+    <mat-card-content class="current-book-info">
+        <p matLine>By: {{book.author}}</p>
+        <p matLine>{{book.description}}</p>
+        <p matLine>{{book.pages}} pages</p>
+    </mat-card-content>
+</mat-card>

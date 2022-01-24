@@ -1,3 +1,7 @@
 <div class="home-container"> 
     <app-stat-card *ngFor="let stat of stats" [title]="stat.title" [icon]="stat.icon" [subtitle]="stat.subtitle"></app-stat-card>
 </div>
+
+<div>
+    <app-currently-reading-card *ngFor="let book of books" [book]="book"></app-currently-reading-card>
+</div>
